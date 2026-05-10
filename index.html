@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Study Group Matcher</title>
+    <style>
+      body{font-family:system-ui,Arial;padding:20px;max-width:900px;margin:auto}
+      form{margin-bottom:1rem}
+      .card{border:1px solid #ddd;padding:.5rem;margin-bottom:.5rem}
+      .row{display:flex;gap:.5rem}
+    </style>
+  </head>
+  <body>
+    <h1>Study Group Matcher</h1>
+
+    <section>
+      <h2>Create Group</h2>
+      <form id="groupForm">
+        <input name="name" placeholder="Group name" required>
+        <input name="subject" placeholder="Subject (e.g., Calculus)" required>
+        <input name="description" placeholder="Short description">
+        <button type="submit">Create</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Joiner / Member</h2>
+      <form id="memberForm">
+        <input name="name" placeholder="Your name" required>
+        <input name="email" placeholder="Email (optional)">
+        <button type="submit">Add Member</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Schedule Meeting</h2>
+      <form id="eventForm">
+        <select id="groupSelect" name="groupId"></select>
+        <input name="title" placeholder="Meeting title" required>
+        <input name="time" type="datetime-local" required>
+        <input name="location" placeholder="Location / link">
+        <button type="submit">Schedule</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Groups & Upcoming</h2>
+      <div id="lists"></div>
+    </section>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
